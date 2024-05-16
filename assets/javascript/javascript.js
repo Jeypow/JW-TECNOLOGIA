@@ -1,6 +1,6 @@
 const header = document.querySelector('.header')
 const footer = document.querySelector('.footer')
-const main = document.querySelector('.main')
+const busca = document.querySelector('.busca')
 const projmain = document.querySelector('.projmain')
 const parcmain = document.querySelector('.parcmain')
 fetch('header.html')
@@ -11,13 +11,13 @@ fetch('header.html')
     })
     .catch(error => console.error('Erro ao carregar o header:", error'));
     
-fetch('main.html')
+fetch('busca.html')
     .then(response => response.text())
     .then(data => {
-        main.innerHTML = data;
+        busca.innerHTML = data;
         
     })
-    .catch(error => console.error('Erro ao carregar o main:", error'));
+    .catch(error => console.error('Erro ao carregar o busca:", error'));
 
 fetch('footer.html')
     .then(response => response.text())
@@ -58,3 +58,18 @@ fetch('footer.html')
             window.sessionStorage.removeItem('scrollPosition');
         }
     };
+
+
+    function validarCampo() {
+        // Obtém o valor do campo de texto
+        var texto = document.getElementById('campoTexto').value;
+        var vallido = document.getElementById('validaremail')
+        // Verifica se o campo está vazio
+        if (texto.trim() === '') { // .trim() remove espaços em branco no início e no final
+            alert('Por favor, preencha o campo de texto.');
+            return false; // Impede o envio do formulário se o campo estiver vazio
+        } else {
+            alert('O campo de texto está preenchido!');
+            return true; // Permite o envio do formulário se o campo estiver preenchido
+        }
+    }
