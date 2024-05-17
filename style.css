@@ -8,6 +8,19 @@ body{
     padding: 0;
     background-color: white;
 }
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
 .color1{
     background-color: rgb(255, 255, 255);
 }
@@ -50,6 +63,7 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
     background-position-x: 50%;
     margin-top: 0.5%;
     margin-left: 1%;
+    cursor: pointer;
 }
 .menu-nav{
     padding: 1.5%;
@@ -57,16 +71,25 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
   
 }
 
+
 .menu-nav >div{
     display: inline-block; 
     margin-right: 10px; 
     cursor:pointer;
-    font-size: 12px;
+    font-size: 18px;
+    
+}
+.menu-nav >div:hover{
+    color: white; /* Muda a cor do texto para branco */
+    background-color: #333; /* Muda o fundo para cinza escuro */
+    text-decoration: underline; /* Adiciona sublinhado ao texto */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .maicontainr{
-    width: 70%;
+   width: calc(1600 + 10%);
     margin: 0 auto;
-    margin-top: 3%;
+    margin-top: 80px;
 }
 .projetostitle{
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -76,6 +99,8 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
     letter-spacing: 15px; 
     align-items: center;
     text-decoration: none;
+    margin-top: -42px;
+
 }
 .linha{
     border-top: 1px solid black;
@@ -92,17 +117,64 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
    
     
 }
+.projetoes
+{
+    width: calc(50% - 20px);
+    box-sizing: border-box; 
+    display:flex;
+    justify-content: end;
+    margin-right: 20px;
+    
+}
+.projetoes > div{
+    justify-content: flex-end;
+    
+}
 .projetosimg{
     
     height: 200px;
     width: 50%;
     left:0%;
-    background-image: url("assets/img/slide1.jpg");
+    background-image: url("assets/img/Ai_na_Saude.jpg");
     background-size: cover;
     background-position: right;
-    margin-left: 47%;
+    
     margin-top: 4%;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    
 }
+.pimg1{
+    
+ 
+    background-image: url("assets/img/Ai_na_Saude.jpg");
+   
+}
+.pimg2{
+    
+ 
+    background-image: url("assets/img/iot-na-agricultura-hortas.jpg");
+   
+}
+.pimg3{
+    
+ 
+    background-image: url("assets/img/Realidade-aumentada.webp");
+   
+}
+.pimg4{
+    
+ 
+    background-image: url("assets/img/Blockchai.jpg");
+   
+}
+.pimg5{
+    
+ 
+    background-image: url("assets/img/slide1.jpg");
+   
+}
+
+
 
 
 .projeto:nth-child(2) {
@@ -113,20 +185,29 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-wrap: wrap;
 }
+.projetoes h1{
+    margin-left: 2%;
+    margin-top: 90px;    
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 25px;
+    text-wrap: wrap;
+    
+}
 .projeto h1{
     margin-left: 2%;
-    margin-top:3%;
-    
+    margin-top: 90px;    
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 25px;
     text-wrap: wrap;
 }
-.porjeto h2{
+.titlelinha > h2{
     margin-left: 2%;
     color: rgb(83, 82, 82);
     text-decoration: none;
-    font-size: 12;
+    font-size: 23px;
+    
 }
 .titlelinha{
     width: 50%;
@@ -153,34 +234,7 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
     grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas com largura igual */
     
 }
-.plogo1{
-    background-image: url("assets/img/cisco.png");
-    
-}
-.plogo2{
-    background-image: url("assets/img/ibm.png");
-}
-.plogo3{
-    background-image: url("assets/img/github.png");
-}
-.plogo4{
-    background-image: url("assets/img/oracle.png");
-}
-.plogo5{
-    background-image: url("assets/img/redhat.png");
-}
-.plogo6{
-    background-image: url("assets/img/vmware.png");
-}
-.plogo7{
-    background-image: url("assets/img/adobe.png");
-}
-.plogo8{
-    background-image: url("assets/img/Autodesk.png");
-}
-.plogo9{
-    background-image: url("assets/img/aws.png");
-}
+
 .part >div{
      
     height: 150px;
@@ -188,7 +242,7 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
     background-size: cover;
     margin-left: 35%;
     margin-bottom: 3%;
-    background-size: 100%;
+    background-size: 80%;
     background-position-y: 54%;
     background-position-x: 50%;
     background-repeat: no-repeat;
@@ -221,14 +275,14 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
     border: 2px solid transparent; 
     transition: border-color 0.3s;
-    border-radius:60px;
 }
 .fcontainer > div>h1{
     font-size: 18px;
     cursor: pointer;
     
 }
-.fcontainer > div>h2{
+.fcontainer > div >h2{
+    font-size: 20px;
     cursor: pointer;
 }
 .fcontainer > div>h3{
@@ -244,7 +298,6 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
     text-decoration: underline;
 }
 .fcontainer >div >h2{
-    font-size:10px;
     text-decoration: none; 
     transition: border-bottom 0.3s;
 }
@@ -273,9 +326,13 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
 }
 .stlabel{
     position: absolute;
-    left: 45%;
-    top: 40%;
-    
+    left: 39%;
+
+    top: 38%;
+    font-size: 32px;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .stlabel form input{
     width: 300px;
@@ -295,3 +352,235 @@ box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     border-radius: 5px;
 }
+.validaremail{
+     /* largura da borda */
+     /* cor da borda */
+}
+.stlabel2{
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.plogo1{
+    background-image: url("assets/img/cisco.png");
+    
+}
+.plogo2{
+    background-image: url("assets/img/ibm.png");
+}
+.plogo3{
+    background-image: url("assets/img/github.png");
+}
+.plogo4{
+    background-image: url("assets/img/oracle.png");
+}
+.plogo5{
+    background-image: url("assets/img/redhat.png");
+}
+.plogo6{
+    background-image: url("assets/img/vmware.png");
+}
+.plogo7{
+    background-image: url("assets/img/adobe.png");
+}
+.plogo8{
+    background-image: url("assets/img/Autodesk.png");
+}
+.plogo9{
+    background-image: url("assets/img/aws.png");
+}
+.logotipo{
+    
+    height:400px;
+    width: 600px;
+    background-image: url("assets/img/LOGO.png");
+    margin: 0 auto;
+    background-position-y: center;
+    background-size: cover;
+}
+.espaco{
+    margin-top: 80px;
+}
+.textlogo >h1{
+    text-align: left;
+font-size: 50px;
+
+    
+}
+.textlogo >h2{
+    font-weight: 100;
+
+}
+.curriculoimg1{
+    height:100px;
+    width: 100px;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #333135;
+}
+.curriculoimg1 img{
+    object-fit: cover;
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden; 
+}
+
+.campocurriculo{
+    padding: 4px;
+    border: 1px solid #adadad;
+    display:flex;
+    border-radius: 2%;
+    box-shadow: 1px 1px  2px 1px rgba(0, 0, 0, 0.5);
+}
+.campocurriculo:hover{
+    box-shadow: 2px 2px  5px 2px rgba(0, 0, 0, 0.5);
+}
+.campocurriculo > h1{   
+    color: rgb(102, 102, 102);
+    font-weight: bold;
+    font-size: 25px;
+    margin:0;
+    text-wrap: wrap;
+    
+}
+.perfiltext h1{
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+    margin-left: 4%;
+    margin-top: 20px;
+    font-weight: 100;
+    font-size: medium;
+}
+.nometit{
+    font-weight: 600;
+    text-align: left;
+    font-size: 23px;
+    margin-left: 4%;
+}
+.nometit img {
+    width: 20px;
+    height: auto;
+}
+.tamanhopg3{
+    max-width: calc(1400px + 10%);
+    margin: 0 auto;
+}
+.marginl{
+    width: 48%;
+    margin-left: 1%;
+}
+.nnt img{
+
+    width: 20px;
+    height: 20px;
+}
+.follows{
+    margin-top: 18%;
+}
+.follows > a img{
+    
+    width: 60px;
+    height: 60px;
+}
+.follows h1{
+    font-size: large;
+    
+}
+.color2{
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(to right, white 50%, black 50%);
+}
+.dsplblock{
+    display: block;
+}
+.endereco{
+    font-family: system-ui;
+}
+.endereco h1{
+    font-size: 51px;
+    margin-left: 10%;
+    font-family: system-ui;
+}
+.endereco h2{
+    letter-spacing: 2px;
+}
+.w h1{
+    color: white;
+}
+.endereco input{
+    display: block;
+    margin-left: 20%;
+    width: 75%;
+    margin-bottom: 5%;
+    font-size: 100%;
+}
+.inputnome{
+
+    height: 53px;
+}
+.inputemail{
+
+    height: 53px;
+}
+.inputdescricao{
+   display: block;
+    margin-left: 20%;
+    width: 75%;
+    height: 180px;
+    margin-bottom: 10px;
+}
+.buttonsly{
+    margin-bottom: 4%;
+    text-align: left;
+    margin-left: 20%;
+    margin-top: 1%;
+}
+.buttonsly button{
+    width: 133px;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 3px;
+    height: 53px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    font-size: 150%;
+}
+
+    .buttonsly button:hover{
+        border: solid 1px rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transform: scale(1.2);
+        
+    }
+    .dtbutton{
+        width: 133px;
+        border: solid 1px rgb(0, 0, 0);
+        border-radius: 3px;
+        height: 53px;
+        color: rgb(0, 0, 0);
+        background-color: white;
+        transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+        font-size: 150%;
+    }
+    
+        .dtbutton:hover{
+            border: solid 2px rgb(0, 0, 0);
+            background-color: rgb(255, 254, 254);
+            color: rgb(0, 0, 0);
+          
+            
+        }
+
+
+
+    .toppaddin{
+        margin-top: 110px;
+    }

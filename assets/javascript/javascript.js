@@ -3,6 +3,7 @@ const footer = document.querySelector('.footer')
 const busca = document.querySelector('.busca')
 const projmain = document.querySelector('.projmain')
 const parcmain = document.querySelector('.parcmain')
+const portfolimain = document.querySelector('.portfolimain')
 fetch('header.html')
     .then(response => response.text())
     .then(data => {
@@ -19,6 +20,13 @@ fetch('busca.html')
     })
     .catch(error => console.error('Erro ao carregar o busca:", error'));
 
+    fetch('portfolimain.html')
+    .then(response => response.text())
+    .then(data => {
+        portfolimain.innerHTML = data;
+        
+    })
+    .catch(error => console.error('Erro ao carregar o portifolimain:", error'));
 fetch('footer.html')
     .then(response => response.text())
     .then(data => {
@@ -61,15 +69,14 @@ fetch('footer.html')
 
 
     function validarCampo() {
-        // Obtém o valor do campo de texto
         var texto = document.getElementById('campoTexto').value;
-        var vallido = document.getElementById('validaremail')
-        // Verifica se o campo está vazio
-        if (texto.trim() === '') { // .trim() remove espaços em branco no início e no final
-            alert('Por favor, preencha o campo de texto.');
+        var valido = document.getElementById('validaremail')
+        if (texto.trim() === '') { 
+           valido.style.color ="red";
+           valido.innerHTML="**preencha o campo**";
             return false; // Impede o envio do formulário se o campo estiver vazio
         } else {
-            alert('O campo de texto está preenchido!');
+            alert('email Enviado!');
             return true; // Permite o envio do formulário se o campo estiver preenchido
         }
     }
